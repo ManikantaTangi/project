@@ -8,7 +8,8 @@ import io
 app = Flask(__name__)
 
 # Load the model (ensure model.h5 is in your project folder)
-model = load_model('model.h5')
+model = load_model('model.h5', compile=False)
+
 
 # Define image input size
 IMG_HEIGHT = 224
@@ -52,3 +53,4 @@ def predict_image():
 if __name__ == '__main__':
     # Run with port provided by Render
     app.run(host='0.0.0.0', port=port)
+

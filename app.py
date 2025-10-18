@@ -52,9 +52,10 @@ def predict_image():
     prediction = model.predict(img_array)
     return jsonify({'prediction': prediction.tolist()})
 
+import os
 if __name__ == '__main__':
-    # Run with port provided by Render
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+
 
 
 

@@ -8,7 +8,8 @@ import io
 app = Flask(__name__)
 
 # Load the model (ensure model.h5 is in your project folder)
-model = load_model('plant_disease_model.keras', compile=False)
+model = load_model('plant_disease_model (1).keras')
+
 
 
 
@@ -54,5 +55,6 @@ def predict_image():
 if __name__ == '__main__':
     # Run with port provided by Render
     app.run(host='0.0.0.0', port=port)
+
 
 
